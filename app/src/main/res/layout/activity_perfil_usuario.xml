@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Nombre de usuario"
+        android:layout_marginTop="10dp"
         android:textSize="30sp" />
 
     <TextView
@@ -33,13 +34,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="correo"
+        android:text="Correo"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Telefono"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_fechanacimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Fecha de nacimiento"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_genero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Genero"
+        android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:onClick="cerrarSesion"
         android:text="Cerrar Sesion" />
-    </LinearLayout>
+
+
+</LinearLayout>

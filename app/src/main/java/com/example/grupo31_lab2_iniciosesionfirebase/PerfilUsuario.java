@@ -21,7 +21,7 @@ import java.util.Map;
 
 public class PerfilUsuario extends AppCompatActivity {
 
-    TextView txt_id, txt_name, txt_email;
+    TextView txt_id, txt_name, txt_email, txt_nacimiento, txt_genre, txt_fono;
     ImageView imv_photo;
     DatabaseReference db_reference;
 
@@ -37,11 +37,17 @@ public class PerfilUsuario extends AppCompatActivity {
         txt_id = findViewById(R.id.txt_userId);
         txt_name = findViewById(R.id.txt_nombre);
         txt_email = findViewById(R.id.txt_correo);
+        txt_nacimiento = findViewById(R.id.txt_fechanacimiento);
+        txt_genre = findViewById(R.id.txt_genero);
+        txt_fono = findViewById(R.id.txt_telefono);
         imv_photo = findViewById(R.id.imv_foto);
 
         txt_id.setText(info_user.get("user_id"));
         txt_name.setText(info_user.get("user_name"));
         txt_email.setText(info_user.get("user_email"));
+        txt_genre.setText(info_user.get("user_genre"));
+        txt_fono.setText(info_user.get("user_phone"));
+        txt_nacimiento.setText(info_user.get("user_birthday"));
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
@@ -53,7 +59,7 @@ public class PerfilUsuario extends AppCompatActivity {
     private void escribirTweets(String user_name) {
         String tweet = "hola mundo firebase 2";
         String fecha = "19/06/2022"; //Fecha actual
-        String autor= "Torres, Bowen, Lara, Vera";
+        String autor= "Torres, Bowen, Lara, Tumbaco";
         Map<String, String> hola_tweet = new HashMap<String, String>();
         hola_tweet.put("autor", autor);
         hola_tweet.put("fecha", fecha);
